@@ -1,4 +1,5 @@
 # Financial Performance Dashboard - Power BI Analysis
+#PowerBI #DataAnalysis #BusinessIntelligence #DataVisualization #DAX #SalesAnalytics #ProfitOptimization #SeasonalTrends #ProductStrategy #RegionalAnalysis #DataDriven #InteractiveDashboards
 
 ## Project Overview
 This Power BI dashboard analyzes financial performance using the "Financial Sample.xlsx" dataset, which includes sales, profit, units sold, discounts, and other metrics across customer segments, products, and countries in 2014. The dashboard is designed to provide actionable insights for business stakeholders to optimize sales strategies, improve profitability, and identify growth opportunities.
@@ -78,7 +79,8 @@ Estimated total sales are ~$10M, with data spanning 2013-2014.
    - Explore drill-downs and cross-filtering for detailed insights.
 
 ## Screenshots
-*(To be added: Include screenshots of each dashboard page for visual reference.)*
+![financial_dashboard](https://github.com/user-attachments/assets/b1fa90ec-a16d-4bf8-af61-5f032a79de36)
+
 
 ## Future Enhancements
 - Incorporate Key Influencers visual to analyze drivers of profitability.
