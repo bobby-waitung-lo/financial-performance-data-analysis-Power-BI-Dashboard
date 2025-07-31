@@ -79,7 +79,7 @@ Estimated total sales are ~$10M, with data spanning 2013-2014.
    - Explore drill-downs and cross-filtering for detailed insights.
 
 ## Screenshots
-![financial_dashboard](https://github.com/user-attachments/assets/b1fa90ec-a16d-4bf8-af61-5f032a79de36)
+![financial_dashboard](https://github.com/user-attachments/assets/9ebef101-0a1b-47b9-8d36-5812b20ea37d)
 
 
 ## Future Enhancements
