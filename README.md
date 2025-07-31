@@ -1,14 +1,16 @@
 # Financial Performance Dashboard - Power BI Analysis
 
 ## Project Overview
-This Power BI dashboard analyzes financial performance using the "Financial Sample.xlsx" dataset, which includes sales, profit, units sold, discounts, and other metrics across customer segments, products, countries, and time periods (2013-2014). The dashboard is designed to provide actionable insights for business stakeholders to optimize sales strategies, improve profitability, and identify growth opportunities.
+This Power BI dashboard analyzes financial performance using the "Financial Sample.xlsx" dataset, which includes sales, profit, units sold, discounts, and other metrics across customer segments, products, and countries in 2014. The dashboard is designed to provide actionable insights for business stakeholders to optimize sales strategies, improve profitability, and identify growth opportunities.
 
-The project consists of five key pages:
+The project consists of 7 key pages:
 1. **Overview Page**: High-level snapshot of sales, profit, and units sold by segment, product, and country.
-2. **Trends Page**: Time-based analysis of sales, profit, and units sold to identify seasonal patterns and growth trends.
-3. **Discount Impact Page**: Evaluation of how discounts affect sales volume and profitability.
-4. **Product Analysis Page**: Comparison of product performance (Carretera, Montana, Paseo, Velo, VTT, Amarilla) to inform product strategy.
-5. **Regional Analysis Page**: Geographic analysis of performance across countries (Canada, Germany, France, Mexico, United States).
+2. **Product Analysis Page**: Comparison of product performance (Carretera, Montana, Paseo, Velo, VTT, Amarilla) to inform product strategy.
+3. **Regional Analysis Page**: Geographic analysis of performance across countries (Canada, Germany, France, Mexico, United States).
+4. **Segment Analysis Page**: Customer segment analysis of of sales, profit, COGS, and average profit margin.
+5. **Discount Impact Page**: Evaluation of how discounts affect sales volume and profitability.
+6. **Trends Page**: Time-based analysis of sales, profit, and units sold to identify seasonal patterns and growth trends.
+7. **Summary Page**: Key insights and actionable recommendations.
 
 ## Dataset
 The "Financial Sample.xlsx" dataset contains the following key fields:
@@ -46,32 +48,32 @@ Estimated total sales are ~$10M, with data spanning 2013-2014.
 - **Financial Sample.xlsx**: Source dataset used for analysis.
 - **Power BI File (Financial_Dashboard.pbix)**: Contains the dashboard with all pages, visuals, and DAX measures.
 - **DAX Measures**:
-  - `Total Sales = SUM(Sheet1[Sales])`
-  - `Total Profit = SUM(Sheet1[Profit])`
-  - `Avg Profit Margin = DIVIDE(SUM(Sheet1[Profit]), SUM(Sheet1[Sales]), 0)`
-  - `Sales Contribution % = DIVIDE(SUM(Sheet1[Sales]), CALCULATE(SUM(Sheet1[Sales]), ALL(Sheet1[Country])), 0)`
+  - `Total Sales = SUM(financials[Sales])`
+  - `Total Profit = SUM(financials[Profit])`
+  - `Avg Profit Margin = DIVIDE(SUM(financials[Profit]), SUM(financials[Sales]), 0)`
+  - `Sales Contribution % = DIVIDE(SUM(financials[Sales]), CALCULATE(SUM(financials[Sales]), ALL(financials[Country])), 0)`
   - Additional measures for units sold, discounts, and pricing metrics.
 
 ## Setup Instructions
 1. **Prerequisites**:
-   - Power BI Desktop (latest version).
+   - Power BI Desktop.
    - "Financial Sample.xlsx" dataset (included in the repository).
 
 2. **Installation**:
    - Clone or download this repository.
-   - Open `Financial_Dashboard.pbix` in Power BI Desktop.
+   - Open `financial_dashboard.pbix` in Power BI Desktop.
    - Ensure the dataset is linked to the `Sheet1` table in the Power BI model.
 
 3. **Data Preparation**:
    - Verify data types: `Sales`, `Profit`, `Discounts`, `COGS` as Currency; `Units Sold` as Decimal; `Date` as Date.
    - Create a Date Table:
      ```DAX
-     DateTable = CALENDAR(DATE(2013, 1, 1), DATE(2014, 12, 31))
+     DateTable = CALENDAR(DATE(2014, 1, 1), DATE(2014, 12, 31))
      ```
    - Relate `Sheet1[Date]` to `DateTable[Date]` for time-based analysis.
 
 4. **Usage**:
-   - Navigate through the five dashboard pages (Overview, Trends, Discount Impact, Product Analysis, Regional Analysis).
+   - Navigate through the 7 dashboard pages (Overview, Product Analysis, Regional Analysis, Segment Analysis, Discount Impact, Trends, and Summary).
    - Use slicers to filter by Segment, Country, Product, Discount Band, or Year.
    - Explore drill-downs and cross-filtering for detailed insights.
 
@@ -79,19 +81,12 @@ Estimated total sales are ~$10M, with data spanning 2013-2014.
 *(To be added: Include screenshots of each dashboard page for visual reference.)*
 
 ## Future Enhancements
-- Add predictive analytics to forecast sales trends for 2015.
 - Incorporate Key Influencers visual to analyze drivers of profitability.
 - Expand regional analysis with external economic data for deeper context.
 - Automate data refreshes for real-time updates (if connected to a live source).
 
-## Contributing
-Contributions are welcome! Please submit a pull request or open an issue for suggestions, bug fixes, or additional features.
-
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
 ## Contact
-For questions or feedback, connect with me on [LinkedIn](https://www.linkedin.com/in/your-profile) or open an issue on GitHub.
+For questions or feedback, connect with me on [LinkedIn](https://www.linkedin.com/in/bobby-waitung-lo) or open an issue on GitHub.
 
 ---
 
